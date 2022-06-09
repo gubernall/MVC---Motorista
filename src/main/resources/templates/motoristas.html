@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Motoristas</title>
+    <style>
+        body{
+        font-family: arial;
+        }
+    </style>
+</head>
+<body>
+<h1>Lista de Motoristas</h1>
+<hr>
+    <table>
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th> Nome </th>
+                <th> Classificação</th>
+                <th> Placa </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="Motorista:${Motoristas}">
+                <td th:text="${Motorista.id}">id</td>
+                <td th:text="${Motorista.nome}">Nome</td>
+                <td th:text="${Motorista.classificacao}">classificacao</td>
+                <td th:text="${Motorista.placa}">placa</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
